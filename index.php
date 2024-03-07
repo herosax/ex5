@@ -121,7 +121,7 @@ $hh="641";
 xx:
 if($hh=="651"){exit;sleep(86400);}
 //$url = "https://excentiv.com/offerwall?userid=91067&key=AB9G6WLUvRfwcI4YtPxF";
-$url = "https://excentiv.com/offerwall/?userid=48125&key=kMb1m7Rirq8Hpta06GcU";
+$url = "https://excentiv.com/offerwall/?userid=9039f689ef4f&key=5eaQHDSVYcwbdACp6ZB7";
 $of = ofer($url, 'GET');
 
 sleep(5);
