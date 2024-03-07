@@ -121,7 +121,7 @@ $hh="641";
 xx:
 if($hh=="651"){exit;sleep(86400);}
 //$url = "https://excentiv.com/offerwall?userid=91067&key=AB9G6WLUvRfwcI4YtPxF";
-$url = "https://excentiv.com/offerwall?userid=155104&key=ywk1nBYibqD60Wzrox3L";
+$url = "https://excentiv.com/offerwall/?userid=48125&key=kMb1m7Rirq8Hpta06GcU";
 $of = ofer($url, 'GET');
 
 sleep(5);
@@ -174,8 +174,10 @@ $data = "game_id=".$idd."&csrf_token=".$csf."&captcha=recaptchav2&g-recaptcha-re
 $las = batt($url, 'POST', $data);
 
 $suc = explode(', to continue earning',explode('<div class="alert text-center alert-success"><i class="fa fa-check-circle"></i> ', $las)[1])[0];
-if($suc==""){goto xx;}
-echo"ID [".$hh."] $suc \n";
+date_default_timezone_set('Asia/Jakarta');
+$timestamp = time();
+$wak = date("[H:i]", $timestamp);
+if (strpos($suc, "obtained") !== false) {echo"".$wak." ID [".$hh."] $suc \n";}
 sleep($tim);
 if($lef=="29/30"){$hh=$hh+1;goto xx;}
 endwhile;
